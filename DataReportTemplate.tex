@@ -1,0 +1,55 @@
+\documentclass[10pt, a4j]{jarticle} 
+
+\usepackage[dvipdfmx]{graphicx} %図を挿入するためのパッケージ
+\usepackage{amsmath,amssymb} %数学拡張パッケージ
+\usepackage{layout} % \layoutと入れることでレイアウト情報が出る（印刷時には消すこと）
+\usepackage{here} % tableで強制的に指定位置に配置するためのやつ．[H]と指定すると発動する．
+
+%% 高さの設定
+\setlength{\textheight}{\paperheight}   % ひとまず紙面を本文領域に
+\setlength{\topmargin}{-5.4truemm}      % 上の余白を20mm(=1inch-5.4mm)に
+\addtolength{\topmargin}{-\headheight}  % 
+\addtolength{\topmargin}{-\headsep}     % ヘッダの分だけ本文領域を移動させる
+\addtolength{\textheight}{-40truemm}    % 下の余白も20mmに
+%% 幅の設定
+\setlength{\textwidth}{\paperwidth}     % ひとまず紙面を本文領域に
+\setlength{\oddsidemargin}{-5.4truemm}  % 左の余白を20mm(=1inch-5.4mm)に
+\setlength{\evensidemargin}{-5.4truemm} % 
+\addtolength{\textwidth}{-40truemm}     % 右の余白も20mmに
+%% ページ番号出力しない
+\pagestyle{empty} % すべてのページ番号を消去
+
+\begin{document} 
+
+% <基礎実験フォーマット>
+\renewcommand{\thefigure}{\thesection.\arabic{figure}} %図
+\renewcommand{\thetable}{\thesection.\arabic{table}} %表
+\renewcommand{\theequation}{\thesection.\arabic{equation}} %数式
+% </ 基礎実験フォーマット>
+
+%-------------------------
+\section{実験結果} 
+% <番号の振り直し>
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+% </ 番号の振り直し>
+
+%-------------------------
+\section{考察と結論} 
+% <番号の振り直し>
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+% </ 番号の振り直し>
+
+%-------------------------
+\section{参考文献} 
+% <番号の振り直し>
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+% </ 番号の振り直し>
+
+
+\end{document} 
