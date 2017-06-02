@@ -5,6 +5,16 @@
 \usepackage{layout} % \layoutと入れることでレイアウト情報が出る（印刷時には消すこと）
 \usepackage{here} % tableで強制的に指定位置に配置するためのやつ．[H]と指定すると発動する．
 
+%% ページ番号（現在ページ/総ページ）を右下に出す
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\lhead{}
+\rhead{}
+\cfoot{}
+\rfoot{\thepage{}/{}\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+
 %% 高さの設定
 \setlength{\textheight}{\paperheight}   % ひとまず紙面を本文領域に
 \setlength{\topmargin}{-5.4truemm}      % 上の余白を20mm(=1inch-5.4mm)に
@@ -16,8 +26,7 @@
 \setlength{\oddsidemargin}{-5.4truemm}  % 左の余白を20mm(=1inch-5.4mm)に
 \setlength{\evensidemargin}{-5.4truemm} % 
 \addtolength{\textwidth}{-40truemm}     % 右の余白も20mmに
-%% ページ番号出力しない
-\pagestyle{empty} % すべてのページ番号を消去
+
 
 \begin{document} 
 
