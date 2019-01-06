@@ -1,0 +1,60 @@
+\documentclass[titlepage, 11pt, a4j]{jsarticle} 
+
+\usepackage[dvipdfmx]{graphicx} %図を挿入するためのパッケージ
+\usepackage{amsmath,amssymb} %数学拡張パッケージ
+\usepackage{layout} % \layoutと入れることでレイアウト情報が出る（印刷時には消すこと）
+\usepackage{here} % tableで強制的に指定位置に配置するためのやつ．[H]と指定すると発動する．
+\usepackage{listings,jlisting} % ソースコード貼り付け用
+\usepackage{url}
+
+% <listings styleset>
+\lstset{%
+  % language={C},
+  basicstyle={\small},%
+  identifierstyle={\small},%
+  commentstyle={\small\itshape},%
+  keywordstyle={\small\bfseries},%
+  ndkeywordstyle={\small},%
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},%
+  numbers=left,%
+  xrightmargin=0zw,%
+  xleftmargin=3zw,%
+  numberstyle={\scriptsize},%
+  stepnumber=1,
+  numbersep=1zw,%
+  lineskip=-0.5ex%
+}
+% \renewcommand{\lstlistingname}{Algorithm} % Listings -> Algorithm
+% </listings styleset>
+
+\usepackage[top=10mm, bottom=10mm, left=15mm, right=15mm]{geometry}
+%% ページ番号出力しない
+\pagestyle{empty} % すべてのページ番号を消去
+
+
+\begin{document} 
+
+\title{Title}
+\author{1X012345 \\ Author's Name}
+\date{出題日 \\ xxxx年xx月xx日 \\ 提出日\\ xxxx年xx月xx日}
+\maketitle
+
+% <基礎実験フォーマット>
+\renewcommand{\thefigure}{\thesection.\arabic{figure}} %図
+\renewcommand{\thetable}{\thesection.\arabic{table}} %表
+\renewcommand{\theequation}{\thesection.\arabic{equation}} %数式
+\renewcommand{\thelstlisting}{\thesection.\arabic{lstlisting}} %ソースコード
+% </ 基礎実験フォーマット>
+
+%-------------------------
+\section{hoge}
+% <番号の振り直し>
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\setcounter{equation}{0}
+\setcounter{lstlisting}{0}
+% </ 番号の振り直し>
+
